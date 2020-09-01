@@ -10,7 +10,10 @@ Basic button component, fire 'click' event when tapped.
 
 ### Examples
 
--
+```html
+<mu-button>Button</mu-button>
+```
+
 
 
 
