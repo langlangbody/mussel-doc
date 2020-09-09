@@ -1,22 +1,16 @@
 import {
-  Category
+  ComponentsCategory
 } from '@/storiesHierarchy.js'
 
 import { ARGTYPES } from "./argTypes";
 
 
 export default {
-  title: Category.button,
-  parameters: {
-    docs: {
-      title:'shu',
-      description: { component: '按钮' }
-    }
-  }
+  title: ComponentsCategory.message
 };
 
 
-const Template = (args, {
+export const View  = (args, {
   argTypes
 }) => ({
   props: Object.keys(argTypes),
@@ -24,22 +18,17 @@ const Template = (args, {
     <mu-button :active="active" :buttonStyle = "buttonStyle" :buttonShape="buttonShape" :buttonType="buttonType" >
         {{label}}
     </mu-button>
-`,
+`
 });
 
-// 默认样式
-export const primary = Template.bind({});
-
-primary.parameters = {
+View.parameters = {
   preview: { disable: true },
   docs: { disable: true }
 }
 
-primary.argTypes = ARGTYPES
+View.argTypes = ARGTYPES
 
-primary.args = {
+View.args = {
   buttonType: 'primary',
-  label: '按钮',
+  label: '按钮'
 };
-
-primary.storyName = '2.按钮预览'

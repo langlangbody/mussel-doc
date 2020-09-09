@@ -1,28 +1,26 @@
 const path = require('path')
 module.exports = {
-  "stories": [
-    "../**/*.stories.mdx",
-    "../**/*.stories.@(js|jsx|ts|tsx)"
-  ],
+  stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|ts)'],
   logLevel: 'debug',
-  "addons": [
-    "@storybook/addon-links",
-    "storybook-addon-preview",
-    "@storybook/addon-options",
-    "@storybook/addon-notes/register-panel",
+  addons: [
+    '@storybook/addon-links',
+    'storybook-addon-preview',
+    '@storybook/addon-options',
+    '@storybook/addon-notes/register-panel',
+    '@storybook/addon-knobs',
     {
       name: '@storybook/addon-essentials',
       options: {
         backgrounds: true,
         actions: false,
-        controls: true,
+        controls: false,
         docs: true,
         viewport: true,
         toolbars: false
       }
     }
   ],
-  webpackFinal: async (config) => {
+  webpackFinal: async config => {
     config.resolve = {
       ...config.resolve,
       alias: {
@@ -34,5 +32,4 @@ module.exports = {
     }
     return config
   }
-
 }

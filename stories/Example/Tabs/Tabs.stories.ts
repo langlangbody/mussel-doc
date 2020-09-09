@@ -1,17 +1,15 @@
-import {
-  Category
-} from '@/storiesHierarchy.js'
+import { Category } from '@/storiesHierarchy.js'
 
-import Bar from '@docs/navigation/tabs.md';
+import Bar from '@docs/navigation/tabs.md'
 
-import { confirm } from 'mussel'
+import { confirm } from '@mctech/mussel'
 
 import Temp from './template'
 
 export default {
   title: Category.tabs
   // Our exports that end in "Data" are not stories.
-};
+}
 export const Default = () => ({
   template: Temp,
   data () {
@@ -53,14 +51,14 @@ export const Default = () => ({
 })
 Default.parameters = {
   notes: { Bar },
-  controls: { disable: true },
+  knobs: { disable: true },
   preview: [
     {
-        tab: "code",
-        description: "",
-        template: Temp,
-        language: "html",
-        copy: true
-    },
+      tab: 'code',
+      description: '',
+      template: Temp,
+      language: 'html',
+      copy: true
+    }
   ]
 }

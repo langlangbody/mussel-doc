@@ -1,12 +1,17 @@
-import {
-  Category
-} from '@/storiesHierarchy.js'
+import { Category } from '@/storiesHierarchy.js'
 
-import MessageMD from '@docs/message/message-box.md';
+import MessageMD from '@docs/message/message-box.md'
 
 import Temp from './template'
 
-import { alert,confirm,warn,error,notify, showMessage } from 'mussel'
+import {
+  alert,
+  confirm,
+  warn,
+  error,
+  notify,
+  showMessage
+} from '@mctech/mussel'
 
 export default {
   title: Category.message,
@@ -15,7 +20,7 @@ export default {
       description: { component: `模态对话框集，用于警告消息或需要确认。` }
     }
   }
-};
+}
 export const Default = () => ({
   template: Temp,
   methods: {
@@ -45,20 +50,22 @@ export const Default = () => ({
       })
     },
     notify: function (type, message) {
-      notify(type, message, 5000, () => { console.log('hello') })
+      notify(type, message, 5000, () => {
+        console.log('hello')
+      })
     }
   }
 })
 Default.parameters = {
   notes: { MessageMD },
-  controls: { disable: true },
+  knobs: { disable: true },
   preview: [
     {
-        tab: "code",
-        description: "",
-        template: Temp,
-        language: "html",
-        copy: true
-    },
+      tab: 'code',
+      description: '',
+      template: Temp,
+      language: 'html',
+      copy: true
+    }
   ]
 }

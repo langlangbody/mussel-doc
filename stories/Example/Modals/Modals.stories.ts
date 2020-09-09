@@ -1,14 +1,11 @@
-import Vue from 'vue';
-import { BaseDialog } from 'mussel'
+import Vue from 'vue'
+import { BaseDialog } from '@mctech/mussel'
 
-import {
-  Category
-} from '@/storiesHierarchy.js'
+import { Category } from '@/storiesHierarchy.js'
 
-import ModalMD from '@docs/modal/modal.md';
+import ModalMD from '@docs/modal/modal.md'
 
 import Temp from './template'
-
 
 const dialog2 = new Vue({
   extends: BaseDialog,
@@ -29,7 +26,6 @@ const dialog2 = new Vue({
   template: '<mu-dialog-wrapper>Winer winer，chicken dinner</mu-dialog-wrapper>'
 })
 
-
 export default {
   title: Category.modals,
   parameters: {
@@ -37,7 +33,7 @@ export default {
       description: { component: `模态对话框集，用于警告消息或需要确认。` }
     }
   }
-};
+}
 export const Default = () => ({
   template: Temp,
   data () {
@@ -78,14 +74,14 @@ export const Default = () => ({
 })
 Default.parameters = {
   notes: { ModalMD },
-  controls: { disable: true },
+  knobs: { disable: true },
   preview: [
     {
-        tab: "code",
-        description: "",
-        template: Temp,
-        language: "html",
-        copy: true
-    },
+      tab: 'code',
+      description: '',
+      template: Temp,
+      language: 'html',
+      copy: true
+    }
   ]
 }

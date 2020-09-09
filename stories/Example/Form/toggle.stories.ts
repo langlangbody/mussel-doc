@@ -1,12 +1,10 @@
-import {
-  Category
-} from '@/storiesHierarchy.js'
+import { Category } from '@/storiesHierarchy.js'
 
-import ToggleMD from '@docs/form/toggle.md';
+import ToggleMD from '@docs/form/toggle.md'
 
 export default {
   title: Category.from
-};
+}
 
 const Temp = /* html */ `
 <mu-v-box>
@@ -29,24 +27,24 @@ const Temp = /* html */ `
 
 export const Toggle = () => ({
   template: Temp,
-  data() {
-    return { 
+  data () {
+    return {
       toggleValue: false
-     }
+    }
   }
 })
 
 Toggle.parameters = {
   notes: { ToggleMD },
-  controls: { disable: true },
+  knobs: { disable: true },
   docs: { disable: true },
   preview: [
     {
-        tab: "code",
-        description: "",
-        template: Temp,
-        language: "html",
-        copy: true
-    },
+      tab: 'code',
+      description: '',
+      template: Temp,
+      language: 'html',
+      copy: true
+    }
   ]
 }

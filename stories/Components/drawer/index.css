@@ -1,0 +1,29 @@
+.drawer1-5 {
+  border-radius: 0 0 16px 16px;
+}
+.drawer2-6 {
+  border-radius: 16px 16px 0 0;
+  height: 400px;
+}
+.drawer3-7 {
+  border-radius: 0 16px 16px 0;
+  width: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.drawer4-8 {
+  border-radius: 16px 0 0 16px;
+  width: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.mu-drawer-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  overflow: visible;
+}

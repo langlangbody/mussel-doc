@@ -1,16 +1,14 @@
-import {
-  Category
-} from '@/storiesHierarchy.js'
+import { Category } from '@/storiesHierarchy.js'
 
-import DateEditorMD from '@docs/form/date-editor.md';
-import PopupEditorMD from '@docs/form/popup-editor.md';
+import DateEditorMD from '@docs/form/date-editor.md'
+import PopupEditorMD from '@docs/form/popup-editor.md'
 
 import Temp from './template'
 
 export default {
   title: Category.from
   // Our exports that end in "Data" are not stories.
-};
+}
 export const Editor = () => ({
   template: Temp,
   data () {
@@ -39,10 +37,10 @@ export const Editor = () => ({
         { value: 19, label: '19' }
       ],
       comboValue1: '',
-      comboValue2: [1,2],
+      comboValue2: [1, 2],
       comboValue3: true,
       searchOptions: [],
-      searchValue: { label: 'x', value: 'x'}
+      searchValue: { label: 'x', value: 'x' }
     }
   },
   methods: {
@@ -53,17 +51,17 @@ export const Editor = () => ({
       console.log(value)
       this.comboValue2 = null
       this.comboOptions = value
-        ?  [
-          { value: 1, label: '1_' + value },
-          { value: 2, label: '2_' + value },
-          { value: 3, label: '3_' + value },
-          { value: 4, label: '4_' + value },
-          { value: 5, label: '5_' + value }
-        ]
+        ? [
+            { value: 1, label: '1_' + value },
+            { value: 2, label: '2_' + value },
+            { value: 3, label: '3_' + value },
+            { value: 4, label: '4_' + value },
+            { value: 5, label: '5_' + value }
+          ]
         : null
     },
     onOptionClick: function (value, option) {
-      console.log(value);
+      console.log(value)
     },
     onSearch: function (value) {
       console.log(new Date(), value)
@@ -81,15 +79,15 @@ export const Editor = () => ({
   }
 })
 Editor.parameters = {
-  notes: { DateEditorMD,PopupEditorMD },
-  controls: { disable: true },
+  notes: { DateEditorMD, PopupEditorMD },
+  knobs: { disable: true },
   preview: [
     {
-        tab: "code",
-        description: "",
-        template: Temp,
-        language: "html",
-        copy: true
-    },
+      tab: 'code',
+      description: '',
+      template: Temp,
+      language: 'html',
+      copy: true
+    }
   ]
 }

@@ -1,33 +1,31 @@
-import {
-  Category
-} from '@/storiesHierarchy.js'
+import { Category } from '@/storiesHierarchy.js'
 
 import Temp from './template'
 
-import { alert } from "mussel";
+import { alert } from '@mctech/mussel'
 
 import './index.css'
 
 export default {
   title: Category.drawer
   // Our exports that end in "Data" are not stories.
-};
+}
 export const Default = () => ({
   template: Temp,
-  data() {
-    return { 
-        draw1Visible: false,
-        draw2Visible: false,
-        draw3Visible: false,
-        draw4Visible: false,
-        draw5Visible: false,
-        draw6Visible: false,
-        draw7Visible: false,
-        draw8Visible: false
-     }
+  data () {
+    return {
+      draw1Visible: false,
+      draw2Visible: false,
+      draw3Visible: false,
+      draw4Visible: false,
+      draw5Visible: false,
+      draw6Visible: false,
+      draw7Visible: false,
+      draw8Visible: false
+    }
   },
   methods: {
-    openDrawer1() {
+    openDrawer1 () {
       this.draw1Visible = true
     },
     openDrawer2 () {
@@ -58,14 +56,14 @@ export const Default = () => ({
 })
 Default.parameters = {
   notes: { disable: true },
-  controls: { disable: true },
+  knobs: { disable: true },
   preview: [
     {
-        tab: "code",
-        description: "",
-        template: Temp,
-        language: "html",
-        copy: true
-    },
+      tab: 'code',
+      description: '',
+      template: Temp,
+      language: 'html',
+      copy: true
+    }
   ]
 }

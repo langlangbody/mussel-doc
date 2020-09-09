@@ -20,13 +20,13 @@ export const Category = {
   expander: '使用案例/Expander 折叠',
   calendar: '使用案例/Calendar 日历',
   promptPanel: '使用案例/prompt-panel 缺省提示'
-};
+}
 
 export const ComponentsCategory = {
   layout: '组件/Layout 布局',
   button: '组件/Buttons 按钮',
   icon: '组件/Icon 图标',
-  bar: '组件/Bar',
+  bar: '组件/PagingBar 分页',
   drawer: '组件/Drawer 抽屉',
   tabs: '组件/Tabs 标签',
   from: '组件/From 表单',

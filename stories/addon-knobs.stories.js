@@ -1,4 +1,4 @@
-import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions'
 import {
   withKnobs,
   text,
@@ -8,45 +8,45 @@ import {
   select,
   color,
   date,
-  button,
-} from '@storybook/addon-knobs';
+  button
+} from '@storybook/addon-knobs'
 
-const logger = console;
+const logger = console
 
 export default {
   title: 'Addon/Knobs',
-  decorators: [withKnobs],
-};
+  decorators: [withKnobs]
+}
 
 export const Simple = () => ({
   props: {
     name: {
       type: String,
-      default: text('Name', 'John Doe'),
-    },
+      default: text('Name', 'John Doe')
+    }
   },
 
   template: `<div @click="age++">I am {{ name }} and I'm {{ age }} years old.</div>`,
 
-  data() {
-    return { age: 40 };
+  data () {
+    return { age: 40 }
   },
-  created() {
-    logger.debug('created');
+  created () {
+    logger.debug('created')
   },
-  destroyed() {
-    logger.debug('destroyed');
-  },
-});
+  destroyed () {
+    logger.debug('destroyed')
+  }
+})
 
 export const AllKnobs = () => {
   const fruits = {
     Apple: 'apples',
     Banana: 'bananas',
-    Cherry: 'cherries',
-  };
+    Cherry: 'cherries'
+  }
 
-  button('Arbitrary action', action('You clicked it!'));
+  button('Arbitrary action', action('You clicked it!'))
 
   return {
     props: {
@@ -56,8 +56,8 @@ export const AllKnobs = () => {
           range: true,
           min: 0,
           max: 30,
-          step: 5,
-        }),
+          step: 5
+        })
       },
       fruit: { default: select('Fruit', fruits, 'apples') },
       price: { default: number('Price', 2.25) },
@@ -65,29 +65,41 @@ export const AllKnobs = () => {
       today: { default: date('Today', new Date('Jan 20 2017 GMT+0')) },
       // this is necessary, because we cant use arrays/objects directly in vue prop default values
       // a factory function is required, but we need to make sure the knob is only called once
-      items: { default: ((items) => () => items)(array('Items', ['Laptop', 'Book', 'Whiskey'])) },
-      nice: { default: boolean('Nice', true) },
+      items: {
+        default: (items => () => items)(
+          array('Items', ['Laptop', 'Book', 'Whiskey'])
+        )
+      },
+      nice: { default: boolean('Nice', true) }
     },
     data: () => ({
-      dateOptions: { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' },
+      dateOptions: {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        timeZone: 'UTC'
+      }
     }),
     computed: {
-      stockMessage() {
+      stockMessage () {
         return this.stock
           ? `I have a stock of ${this.stock} ${this.fruit}, costing $${this.price} each.`
-          : `I'm out of ${this.fruit}${this.nice ? ', Sorry!' : '.'}`;
+          : `I'm out of ${this.fruit}${this.nice ? ', Sorry!' : '.'}`
       },
-      salutation() {
-        return this.nice ? 'Nice to meet you!' : 'Leave me alone!';
+      salutation () {
+        return this.nice ? 'Nice to meet you!' : 'Leave me alone!'
       },
-      formattedDate() {
-        return new Date(this.today).toLocaleDateString('en-US', this.dateOptions);
+      formattedDate () {
+        return new Date(this.today).toLocaleDateString(
+          'en-US',
+          this.dateOptions
+        )
       },
-      style() {
+      style () {
         return {
-          'border-color': this.colour,
-        };
-      },
+          'border-color': this.colour
+        }
+      }
     },
     template: `
           <div style="border: 2px dotted; padding: 8px 22px; border-radius: 8px" :style="style">
@@ -100,17 +112,22 @@ export const AllKnobs = () => {
             </ul>
             <p>{{ salutation }}</p>
           </div>
-        `,
-  };
-};
+        `
+  }
+}
 
-AllKnobs.storyName = 'All knobs';
+AllKnobs.storyName = 'All knobs'
 
 export const XssSafety = () => ({
   props: {
-    text: { default: text('Rendered string', '<img src=x onerror="alert(\'XSS Attack\')" >') },
+    text: {
+      default: text(
+        'Rendered string',
+        '<img src=x onerror="alert(\'XSS Attack\')" >'
+      )
+    }
   },
-  template: '<div v-html="text"></div>',
-});
+  template: '<div v-html="text"></div>'
+})
 
-XssSafety.storyName = 'XSS safety';
+XssSafety.storyName = 'XSS safety'

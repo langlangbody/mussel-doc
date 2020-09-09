@@ -1,19 +1,30 @@
+import Vue from 'vue'
+import { install } from '@mctech/mussel'
 
-import Vue from '@mctech/mussel'
-import {
-  install
-} from '@mctech/mussel'
+import GithubHref from './hearder.vue'
 
 install(Vue)
 
+Vue.component('github-href', GithubHref)
+
 export const parameters = {
   // controls: { expanded: true },
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: {
+    argTypesRegex: '^on[A-Z].*'
+  },
   options: {
     storySort: {
       method: '', //alphabetical 字母排序 order自定义
-      order: ['开发指南','使用案例',['Buttons 按钮','Icon 图标','Layout 布局'],'组件'], // ['Intro', 'Components']
-      locales: '',
-    },
+      order: [
+        '开发指南',
+        '使用案例',
+        ['Buttons 按钮', 'Icon 图标', 'Layout 布局'],
+        '组件',
+        ['Buttons 按钮', 'Icon 图标', 'Layout 布局']
+      ], // ['Intro', 'Components']
+      locales: ''
+    }
   }
 }
+
+import 'loki/configure-vue'
