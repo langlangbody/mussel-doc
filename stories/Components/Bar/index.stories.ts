@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-09-01 12:00:33
+ * @LastEditTime: 2021-02-24 10:36:11
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /mussel-doc/stories/Components/Bar/index.stories.ts
+ */
 import { ComponentsCategory } from '@/storiesHierarchy.js'
 import { withKnobs, boolean, select } from '@storybook/addon-knobs'
 import { notify } from '@mctech/mussel'
@@ -52,8 +60,13 @@ export const View = () => ({
 `,
   data () {
     return {
-      index: 9,
-      pageIndex: 0
+      triggers: [
+        'clickToOpen',
+        'click', // Same as clickToToggle, provided for backwards compatibility.
+        'clickToToggle',
+        'hover',
+        'focus'
+      ]
     }
   },
   computed: {

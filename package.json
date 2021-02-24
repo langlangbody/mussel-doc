@@ -12,11 +12,12 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@mctech/mussel": "^0.1.38",
+    "@mctech/mussel": "^1.0.2-beta",
     "@storybook/addon-notes": "^5.3.21",
     "@storybook/addon-options": "^5.3.21",
     "codemirror": "^5.57.0",
     "core-js": "^3.6.5",
+    "popper.js": "^1.16.1",
     "prismjs": "^1.21.0",
     "storybook-addon-preview": "^1.2.0",
     "vue": "^2.6.11",

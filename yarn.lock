@@ -1786,10 +1786,10 @@
     osnap "^1.1.0"
     tempy "^0.3.0"
 
-"@mctech/mussel@^0.1.38":
-  version "0.1.39"
-  resolved "https://npm.mctech.vip/@mctech%2fmussel/-/mussel-0.1.39.tgz#0e8b749b0639ad082a8f7198c7273e9ea58f140f"
-  integrity sha512-ig/b1pUP9uoM4ly4xH1GlmHkRE4EX2JRvUROa7blfhKuuEUSC8deRAHvC54lDxk951QXf44P4N8NxfcWt0yqDQ==
+"@mctech/mussel@^1.0.2-beta":
+  version "1.0.2-beta"
+  resolved "https://npm.mctech.vip/@mctech%2fmussel/-/mussel-1.0.2-beta.tgz#8ce82258c1b5350d08442ad489ed0224a4b57d79"
+  integrity sha512-u3FphQWRwHviTSak/UPEdX1qT8vBajyw8VrRt7A1h8hy6k4cugJnBKmhUUEnwf8W4Ink64Tsg0k0pUWIs8r2lA==
 
 "@mdx-js/loader@^1.5.1":
   version "1.6.16"
@@ -15124,6 +15124,11 @@ popper.js@^1.14.4, popper.js@^1.14.7:
   version "1.16.1"
   resolved "https://registry.npm.taobao.org/popper.js/download/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
   integrity sha1-KiI8s9x7YhPXQOQDcr5A3kPmWxs=
+
+popper.js@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
 
 portfinder@^1.0.26, portfinder@^1.0.9:
   version "1.0.28"

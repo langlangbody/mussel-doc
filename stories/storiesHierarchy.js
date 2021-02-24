@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-08-14 19:58:40
+ * @LastEditTime: 2021-02-24 10:24:33
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /mussel-doc/stories/storiesHierarchy.js
+ */
 // 目录结构
 
 export const Category = {
@@ -19,7 +27,8 @@ export const Category = {
   dropdown: '使用案例/Dropdown 下拉菜单',
   expander: '使用案例/Expander 折叠',
   calendar: '使用案例/Calendar 日历',
-  promptPanel: '使用案例/prompt-panel 缺省提示'
+  promptPanel: '使用案例/prompt-panel 缺省提示',
+  popper: '组件/popper 气泡提示'
 }
 
 export const ComponentsCategory = {

@@ -2,11 +2,12 @@ import Vue from 'vue'
 import { install } from '@mctech/mussel'
 
 import GithubHref from './hearder.vue'
+import Popper from '../src/components/poptip/index.vue';
 
 install(Vue)
 
 Vue.component('github-href', GithubHref)
-
+Vue.component('popper', Popper)
 export const parameters = {
   // controls: { expanded: true },
   actions: {
