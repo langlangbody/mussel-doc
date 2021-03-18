@@ -1,11 +1,13 @@
-## 说明： 需要引用外部包`popper.js`
+# 说明： 需要引用外部包`popper.js`
 
 ```shell
 npm i -D popper.js
 ```
 
 `popper.vue`
+
 ```html
+
 <template>
   <component :is="tagName">
     <transition
@@ -460,8 +462,13 @@ npm i -D popper.js
     margin-right: 0;
   }
 </style>
+
 ```
+
+
 `dom.js`
+
+
 ```js
 export const on = (element, event, handler) => {
   if (!document.addEventListener) {

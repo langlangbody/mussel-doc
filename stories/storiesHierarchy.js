@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-08-14 19:58:40
- * @LastEditTime: 2021-02-24 10:24:33
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-03-18 20:36:52
+ * @LastEditors: xll
  * @Description: In User Settings Edit
  * @FilePath: /mussel-doc/stories/storiesHierarchy.js
  */
@@ -28,7 +28,7 @@ export const Category = {
   expander: '使用案例/Expander 折叠',
   calendar: '使用案例/Calendar 日历',
   promptPanel: '使用案例/prompt-panel 缺省提示',
-  popper: '组件/popper 气泡提示'
+  popper: '使用案例/popper 气泡提示'
 }
 
 export const ComponentsCategory = {

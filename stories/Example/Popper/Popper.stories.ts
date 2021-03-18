@@ -1,6 +1,6 @@
 import { Category } from '@/storiesHierarchy.js'
 
-import Popper from '@docs/popper/popper.md'
+import PopperMd from '@docs/popper/popper.md'
 
 import Temp from './template'
 
@@ -8,7 +8,7 @@ export default {
   title: Category.popper
   // Our exports that end in "Data" are not stories.
 }
-export const View = () => ({
+export const Default = () => ({
   template: Temp,
   data () {
     return {
@@ -22,9 +22,9 @@ export const View = () => ({
     }
   },
 })
-View.parameters = {
+Default.parameters = {
   knobs: { disable: true },
-  notes: { Popper },
+  notes: { PopperMd },
   docs: { disable: true },
   preview: [
     {
